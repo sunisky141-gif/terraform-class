@@ -6,7 +6,7 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:acm:ap-northeast-2:018546689865:certificate/c0502cce-eb69-4ac3-a370-dcf87a2100e9
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-northeast-2:018546689865:certificate/c0502cce-eb69-4ac3-a370-dcf87a2100e9
   selector:
     app: eks-nginx
   ports:
@@ -18,4 +18,5 @@ metadata:
     protocol: TCP
     port: 443
     targetPort: 80
+
   type: LoadBalancer
